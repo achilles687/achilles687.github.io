@@ -8,7 +8,6 @@ function handleKeyDown(event) {
     const keyElement = document.getElementById(`key${key.toUpperCase()}`);
     const code = event.code;
     const keyN = key.toLowerCase();
-    console.log(keyCode, keyElement, key, code, key.toLowerCase())
     if (keys.includes(keyN)) {
         const audio = new Audio(`audio/${keyN}.wav`);
         audio.play();
