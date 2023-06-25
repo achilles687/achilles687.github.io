@@ -36,10 +36,5 @@ document.addEventListener('keydown', handleKeyDown);
 document.addEventListener("DOMContentLoaded", showKeysByKeyboardLanguage);
 window.addEventListener("languagechange", showKeysByKeyboardLanguage);
 
-const videoContainer = document.getElementById('videoContainer');
-const video = document.createElement('video');
-video.src = 'lamborghini.mp4';
-video.autoplay = true;
-video.loop = true;
-video.muted = true;
-videoContainer.appendChild(video);
+
+
