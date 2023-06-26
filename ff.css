@@ -139,8 +139,21 @@ body {
     object-fit: cover;
 }
 
-.flash {
-    animation: flash 0.2s linear;
+.white-keys kbd,
+.black-keys kbd {
+    /* Diğer stillendirmeler... */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.white-keys kbd, .black-keys kbd {
+    /* Diğer stillendirmeler... */
+    transition: background-color 0.1s ease-in-out;
+}
+
+.white-keys kbd.flash, .black-keys kbd.flash {
+    animation: flash 0.2s;
 }
 
 @keyframes flash {
