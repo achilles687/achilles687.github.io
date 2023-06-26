@@ -84,7 +84,7 @@ document.addEventListener('keydown', handleKeyDown);
 document.addEventListener('keyup', handleKeyUp);
 const keysContainer = document.querySelector('.container');
 keysContainer.addEventListener('mousedown', handleMouseDown);
-keysContainer.addEventListener('mouseup', handleMouseUp);;
+keysContainer.addEventListener('mouseup', handleMouseUp);
 
 document.addEventListener("DOMContentLoaded", showKeysByKeyboardLanguage);
 window.addEventListener("languagechange", showKeysByKeyboardLanguage);
