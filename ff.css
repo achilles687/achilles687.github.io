@@ -1,16 +1,12 @@
 .container {
-    background-color: #333; /* Dark grey */
-    border: 3px solid #000; /* Black border */
-    border-radius: 10px; /* Rounded corners */
-
-    /* Set up dimensions and position for the piano body. */
-    width: 760px;
-    height: 212px;
+    background: #ffcfa3;
+    border: 10px solid #000;
+    border-radius: 75px;
+    width: 759px;
+    height: 352px;
     position: relative;
-    top: 20px;
-    left: 20px;
-
-    /* Add some padding for the keys. */
+    top: 11px;
+    left: 16px;
     padding: 14px;
 }
 
