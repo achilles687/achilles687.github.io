@@ -45,7 +45,7 @@ function playSound(key) {
         if (keyPlaying[key]) return;
 
         const audioKey = (key === ';') ? 'ş' : key;
-        const audio = audioCache[audioKey];
+        const audio = new Audio(`audio/${audioKey}.mp3`);
         audio.play();
 
         keyPlaying[key] = true;
