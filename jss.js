@@ -34,7 +34,7 @@ function playSound(key) {
     if (keys.includes(key)) {
         if (keyPlaying[key]) return;
 
-        const audio = new Audio(`audio/${key}.wav`);
+        const audio = new Audio(`audio/${key}.mp3`);
         audio.play();
 
         keyPlaying[key] = true;
