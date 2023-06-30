@@ -10,7 +10,7 @@ function handleKeyDown(event) {
     if (keys.includes(key)) {
         if (keyPlaying[audioKey]) return; // Eğer tuş zaten basılı tutuluyorsa, tekrar çalmayı engelle
 
-        const audio = new Audio(`audio/${audioKey}.mp3`);
+        const audio = new Audio(`../audio/${audioKey}.mp3`);
         audio.play();
 
         keyPlaying[audioKey] = true; // Basılı tutulan tuşu işaretlemek için nesneye ekle
@@ -34,7 +34,7 @@ function handleKeyUp(event) {
 function preloadAudio() {
     keys.forEach(key => {
         const audioKey = (key === ';') ? 'ş' : key;
-        const audio = new Audio(`audio/${audioKey}.mp3`);
+        const audio = new Audio(`../audio/${audioKey}.mp3`);
         audioCache[audioKey] = audio;
         audio.load();
     });
@@ -45,7 +45,7 @@ function playSound(key) {
         if (keyPlaying[key]) return;
 
         const audioKey = (key === ';') ? 'ş' : key;
-        const audio = new Audio(`audio/${audioKey}.mp3`);
+        const audio = new Audio(`../audio/${audioKey}.mp3`);
         audio.play();
 
         keyPlaying[key] = true;
