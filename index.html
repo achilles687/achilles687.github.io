@@ -10,7 +10,6 @@
 
         // Dil kodları ve yönlendirme URL'leri
         var languages = {
-            "en": "en/",
             "tr": "tr/"
             // Diğer diller ve URL'ler...
         };
@@ -20,14 +19,14 @@
             var redirectURL = languages[userLang];
             window.location.href = redirectURL;
         } else {
-            // Varsayılan olarak İngilizce'ye yönlendir
-            var defaultURL = languages["en"];
+            // Varsayılan olarak ana alan adına yönlendir
+            var defaultURL = "/";
             window.location.href = defaultURL;
         }
     </script>
 
     <!-- İngilizce -->
-    <link rel="alternate" hreflang="en" href="https://onlineplaypiano/en">
+    <link rel="alternate" hreflang="en" href="https://onlineplaypiano/">
     <title lang="en">Online Play Piano - Virtual Piano Online</title>
     <meta name="description" lang="en" content="Play piano online with the virtual piano. Enjoy the interactive and fun experience of playing piano right in your browser. No installation or downloads required.">
 
