@@ -1,5 +1,6 @@
 const keys = ["a", "s", "d", "f", "g", "h", "j", "k", "l", "ş", "o", "p", "w", "e", "t", "y", "u", ";"];
 let keyPlaying = {}; // Basılı tutulan tuşları depolamak için bir nesne
+let audioCache = {}; // Ses dosyalarını önbellekte tutmak için bir nesne
 
 function handleKeyDown(event) {
     const key = event.key.toLowerCase();
@@ -9,7 +10,7 @@ function handleKeyDown(event) {
     if (keys.includes(key)) {
         if (keyPlaying[audioKey]) return; // Eğer tuş zaten basılı tutuluyorsa, tekrar çalmayı engelle
 
-        const audio = new Audio(`audio/${audioKey}.wav`);
+        const audio = new Audio(`audio/${audioKey}.mp3`);
         audio.play();
 
         keyPlaying[audioKey] = true; // Basılı tutulan tuşu işaretlemek için nesneye ekle
@@ -30,11 +31,21 @@ function handleKeyUp(event) {
     }
 }
 
+function preloadAudio() {
+    keys.forEach(key => {
+        const audioKey = (key === ';') ? 'ş' : key;
+        const audio = new Audio(`audio/${audioKey}.mp3`);
+        audioCache[audioKey] = audio;
+        audio.load();
+    });
+}
+
 function playSound(key) {
     if (keys.includes(key)) {
         if (keyPlaying[key]) return;
 
-        const audio = new Audio(`audio/${key}.mp3`);
+        const audioKey = (key === ';') ? 'ş' : key;
+        const audio = audioCache[audioKey];
         audio.play();
 
         keyPlaying[key] = true;
@@ -80,6 +91,7 @@ function showKeysByKeyboardLanguage() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", preloadAudio);
 document.addEventListener('keydown', handleKeyDown);
 document.addEventListener('keyup', handleKeyUp);
 const keysContainer = document.querySelector('.container');
