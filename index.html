@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>
+        // Tarayıcı dilini algıla
+        var userLang = navigator.language || navigator.userLanguage;
+
+        // Dil kodları ve yönlendirme URL'leri
+        var languages = {
+            "en": "en/",
+            "tr": "tr/"
+            // Diğer diller ve URL'ler...
+        };
+
+        // Kullanıcının tarayıcı dilini kontrol et
+        if (languages.hasOwnProperty(userLang)) {
+            var redirectURL = languages[userLang];
+            window.location.href = redirectURL;
+        } else {
+            // Varsayılan olarak İngilizce'ye yönlendir
+            var defaultURL = languages["en"];
+            window.location.href = defaultURL;
+        }
+    </script>
+
     <!-- İngilizce -->
     <link rel="alternate" hreflang="en" href="https://onlineplaypiano/en">
     <title lang="en">Online Play Piano - Virtual Piano Online</title>
