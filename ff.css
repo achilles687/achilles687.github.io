@@ -1,5 +1,14 @@
+* {
+    user-select: none;
+    outline: none;
+}
+h1, h2, h3 {
+    color: beige;
+    font-family: 'Sevillana', cursive;
+    text-align: center;
+}
 .container {
-    background: #ffcfa3;
+    background: rgb(12, 12, 12);
     border: 10px solid #000;
     border-radius: 75px;
     width: 759px;
@@ -12,7 +21,10 @@
 
 body {
     display: flex;
-    background-color: blue;
+    background-image: url(image4-min.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -21,7 +33,7 @@ body {
     position: relative;
 }
 
-.white-keys kbd{
+.white-keys kbd {
     display: inline-block;
     width: 70px;
     height: 200px;
@@ -37,10 +49,11 @@ body {
     z-index: 0;
 }
 
-.black-keys{
+.black-keys {
     position: absolute;
 }
-.black-keys kbd{
+
+.black-keys kbd {
 
     position: relative;
 
@@ -104,6 +117,7 @@ body {
     position: relative;
     left: 257px;
 }
+
 .black-keys #keyP {
     position: relative;
     left: 268px;
@@ -135,20 +149,15 @@ body {
     object-fit: cover;
 }
 
+
 .white-keys kbd,
 .black-keys kbd {
-    /* Diğer stillendirmeler... */
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-.white-keys kbd, .black-keys kbd {
     /* Diğer stillendirmeler... */
     transition: background-color 0.1s ease-in-out;
 }
 
-.white-keys kbd.flash, .black-keys kbd.flash {
+.white-keys kbd.flash,
+.black-keys kbd.flash {
     animation: flash 0.2s;
 }
 
@@ -156,10 +165,13 @@ body {
     0% {
         background-color: white;
     }
+
     50% {
         background-color: mediumpurple;
     }
+
     100% {
         background-color: white;
     }
 }
+
