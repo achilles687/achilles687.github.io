@@ -2,11 +2,15 @@
     user-select: none;
     outline: none;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     color: beige;
     font-family: 'Sevillana', cursive;
     text-align: center;
 }
+
 .container {
     background: rgb(12, 12, 12);
     border: 10px solid #000;
@@ -175,3 +179,45 @@ body {
     }
 }
 
+@media only screen and (max-width: 804px) {
+    .container {
+        width: 271px;
+        height: 404px;
+        top: 11px;
+        left: 6px;
+        padding: 14px;
+    }
+    .white-keys kbd {
+        width: 21px;
+        height: 156px;
+        line-height: 251px;
+        z-index: 0;
+    }
+    .black-keys kbd {
+        top: -168px;
+        left: -67px;
+        width: 19px;
+        height: 121px;
+    }
+    #keyW {
+        left: 10px;
+    }
+    #keyE {
+        left: 5px;
+    }
+    #keyT {
+        left: 25px;
+    }
+    #keyY {
+        left: 20px;
+    }
+    .black-keys #keyU {
+        left: 14px;
+    }
+    .black-keys #keyO {
+        left: 36px;
+    }
+    .black-keys #keyP {
+        left: 30px;
+    }
+}
